@@ -1,7 +1,7 @@
 FluentSendGrid (Inspired by FluentEmail by @lukencode ) 
 ==============
 
-SendGrid template engine is beautiful but is a little bit tricky to use from .net. This library wraps all complexities and exposes nice fluent notation to easily send emails with SendGrid templates. 
+SendGrid template engine is smart but is a little bit tricky to use from .net. This library wraps all complexities and exposes nice fluent notation to easily send emails with SendGrid templates. 
 
 How to? 
 
