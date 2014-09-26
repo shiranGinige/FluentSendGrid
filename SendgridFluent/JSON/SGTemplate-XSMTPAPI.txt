@@ -1,0 +1,11 @@
+﻿{  
+  
+   "filters":{  
+      "templates":{  
+         "settings":{  
+            "enabled":1,
+            "template_id":"--templateid--"
+         }
+      }
+   }
+}
