@@ -11,10 +11,10 @@ namespace SendgridFluent.Test
     [TestFixture]
     public class TemplateTest
     {
-        private const string MyTestEmail = "shiranginige@gmail.com";
-        private const string MyUserName = "shiranginige";
-        private const string MyPassword = "Rewq4321";
-        private const string TemplateId = "51824a40-8db6-4858-b756-9cd50541a9c3";
+        private const string MyTestEmail = "test@gmail.com";
+        private const string MyUserName = "testusername";
+        private const string MyPassword = "testpassword";
+        private const string TemplateId = "templateid";
 
         [Test]
         public void SendWithTemplate_Test()
