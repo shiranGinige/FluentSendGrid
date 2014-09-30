@@ -18,9 +18,9 @@ How to?
          .To("receiver@gmail.com")
          .Subject("Test")
          .From("sender@gmail.com");
-         .Deliver();
+         .Deliver(); ```
          
-         ```
+         
             
 3. To replace content in the template 
 
