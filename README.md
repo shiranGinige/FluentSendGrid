@@ -13,7 +13,6 @@ How to?
       
       SgEmail.WithCredentials("your sendgrid user name", "your password")
          .WithTemplate("sendgrid template id")
-         
          .To("receiver@gmail.com")
          .Subject("Test")
          .From("sender@gmail.com");
