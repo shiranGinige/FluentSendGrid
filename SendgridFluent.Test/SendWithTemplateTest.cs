@@ -22,6 +22,7 @@ namespace SendgridFluent.Test
 
             SgEmail.WithCredentials(MyUserName, MyPassword)
                 .WithTemplate(TemplateId)
+                .Subject("Test")
                 .To(MyTestEmail)
                 .From(MyTestEmail).Deliver();
 
@@ -34,7 +35,7 @@ namespace SendgridFluent.Test
             SgEmail.WithCredentials(MyUserName, MyPassword)
                 .WithTemplate(TemplateId)
                 .To(MyTestEmail)
-                .Subject("Testing with awesome")
+                .Subject("Test with replacable content")
                 .Substitute("-name-","Test")
                 .Substitute("-registrationlink-","http://google.com")
                 .From(MyTestEmail).Deliver();
