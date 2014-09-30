@@ -12,6 +12,7 @@ namespace SendgridFluent
         ISgMail To(string to, string toName=null);
         ISgMail Subject(string subject);
         ISgMail WithTemplate(string templateId);
+        ISgMail Substitute(string tag, string content);
         void Deliver();
     }
 }
