@@ -12,12 +12,12 @@ How to?
 2. Use the following fluent notation to deliver emails 
 
       
-      SgEmail.WithCredentials("your sendgrid user name", "your password")
+      ```SgEmail.WithCredentials("your sendgrid user name", "your password")
          .WithTemplate("sendgrid template id")
          .To("receiver@gmail.com")
          .Subject("Test")
          .From("sender@gmail.com");
-         email.Deliver();
+         email.Deliver();```
             
 3. To replace content in the template 
 
