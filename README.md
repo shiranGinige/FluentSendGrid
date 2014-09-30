@@ -10,10 +10,20 @@ How to?
 
 2. Use the following fluent notation to deliver emails 
 
-            var email =
-                SgEmail.WithCredentials("your sendgrid user name", "your password")
-                    .WithTemplate("sendgrid template id")
-                    .To("receiver@gmail.com")
-                    .From("sender@gmail.com");
-            email.Deliver();
+      SgEmail.WithCredentials("your sendgrid user name", "your password")
+         .WithTemplate("sendgrid template id")
+         .To("receiver@gmail.com")
+         .Subject("Test")
+         .From("sender@gmail.com");
+         email.Deliver();
             
+3. To replace content in the template 
+
+       SgEmail.WithCredentials("your sendgrid user name", "your password")
+         .WithTemplate("sendgrid template id")
+         .To("receiver@gmail.com")
+         .Subject("Test with replacable content")
+         .Substitute("-name-","Test") // -name- tag in the template will be replaced by "Test"
+         .Substitute("-registrationlink-","http://google.com") //-registrationlink- will be replaced by "http://google.com".
+         .From(MyTestEmail).Deliver();
+        }
