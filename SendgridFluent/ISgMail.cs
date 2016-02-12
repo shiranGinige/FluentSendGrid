@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace SendgridFluent
 {
@@ -14,5 +15,6 @@ namespace SendgridFluent
         ISgMail WithTemplate(string templateId);
         ISgMail Substitute(string tag, string content);
         void Deliver();
+        Task DeliverAsync();
     }
 }

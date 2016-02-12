@@ -29,6 +29,19 @@ namespace SendgridFluent.Test
         }
 
         [Test]
+        public async Task SendAsyncWithTemplate_Test()
+        {
+
+           await SgEmail.WithCredentials(MyUserName, MyPassword)
+                .WithTemplate(TemplateId)
+                .Subject("Test")
+                .To(MyTestEmail)
+                .From(MyTestEmail).DeliverAsync();
+
+        }
+
+
+        [Test]
         public void SendWithTemplate_ReplacingContent_Test()
         {
 
