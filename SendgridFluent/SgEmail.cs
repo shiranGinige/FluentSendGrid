@@ -93,8 +93,18 @@ namespace SendgridFluent
         {
             _myMessage.Headers.Add("X-SMTPAPI", Header.JsonSerialize());
 
-            _transportWeb.DeliverAsync(_myMessage);
+            Task.Run(async () => { await _transportWeb.DeliverAsync(_myMessage); }).Wait();
+            
         }
+
+        public async Task DeliverAsync()
+        {
+            _myMessage.Headers.Add("X-SMTPAPI", Header.JsonSerialize());
+
+            await _transportWeb.DeliverAsync(_myMessage); 
+
+        }
+
 
         /// <summary>
         /// Specify the template you want to send the email with
