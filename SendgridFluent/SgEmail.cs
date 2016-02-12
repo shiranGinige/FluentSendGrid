@@ -93,7 +93,7 @@ namespace SendgridFluent
         {
             _myMessage.Headers.Add("X-SMTPAPI", Header.JsonSerialize());
 
-            _transportWeb.Deliver(_myMessage);
+            _transportWeb.DeliverAsync(_myMessage);
         }
 
         /// <summary>
