@@ -18,7 +18,7 @@ How to?
          .To("receiver@gmail.com")
          .Subject("Test")
          .From("sender@gmail.com");
-         .Deliver();
+         .Deliver();//or DeliverAsync();
       ```
 3. To replace content in the template 
 
@@ -30,5 +30,5 @@ How to?
          .Substitute("-name-","Test") // -name- tag in the template will be replaced by "Test"
          .Substitute("-registrationlink-","http://google.com") //-registrationlink- will be replaced by "http://google.com".
          .From(MyTestEmail)
-         .Deliver();
+         .Deliver();//or DeliverAsync();
       ```
